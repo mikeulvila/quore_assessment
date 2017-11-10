@@ -1,0 +1,50 @@
+{
+    "result": "OK",
+    "areas": [
+        {
+            "id": "19082",
+            "name": "110"
+        },
+        {
+            "id": "21001",
+            "name": "111",
+            "notices": ["sleeping during day"]
+        },
+        {
+            "id": "21109",
+            "name": "112"
+        },
+        {
+            "id": "24002",
+            "name": "113"
+        },
+        {
+            "id": "24021",
+            "name": "114",
+            "notices": ["VIP GUEST", "Pet in Room"],
+            "guestCheckout": "1507823350"
+        },
+        {
+            "id": "24022",
+            "name": "115"
+        },
+        {
+            "id": "24023",
+            "name": "116",
+            "notices": ["Pet in Room", "Allergic to feather pillows"]
+        },
+        {
+            "id": "24021",
+            "name": "114",
+            "notices": ["VIP GUEST", "Pet in Room"]
+        },
+        {
+            "id": "23033",
+            "name": "Lobby"
+        },
+        {
+            "id": "29221",
+            "name": "Pool"
+        }
+    ]
+}

@@ -1,0 +1,64 @@
+{
+    "result": "OK",
+    "tasks": [
+        {
+            "id": "382672",
+            "details": {
+                "creator": "1",
+                "created": "1507823350",
+                "area": "24021",
+                "item": "TV (Samsung 200X-1)",
+                "issue": "No Sound",
+                "where": "bedroom",
+                "title": "Bedroom TV making noise",
+                "description":
+                    "Mr. Murray stated on the phone that a gang of toddlers broke the tv. Do Not Enter the room without knocking 3 times",
+                "due": "1507823350",
+                "assignedTo": "3",
+                "uploads": ["1.jpg", "2.jpg"]
+            }
+        },
+        {
+            "id": "421039",
+            "details": {
+                "creator": "1",
+                "created": "1498867200",
+                "area": "",
+                "title": "Check with fire company about upcoming inspection",
+                "description":
+                    "Call the fire local fire house and ask them to verify that the inspection is scheduled for tuesday of next week",
+                "assignedTo": "2"
+            }
+        },
+        {
+            "id": "349023",
+            "details": {
+                "creator": "1",
+                "created": "1491059565",
+                "area": "29221",
+                "item": "Pool Liner",
+                "issue": "damage",
+                "where": "deck",
+                "title": "Deck has damage to the liner",
+                "description":
+                    "Schedule a time for the pool installation company to come out and repair the liner near the area deck.",
+                "assignedTo": "2"
+            }
+        },
+        {
+            "id": "529320",
+            "details": {
+                "creator": "1",
+                "created": "1491060600",
+                "area": "23033",
+                "item": "Computer",
+                "issue": "broken",
+                "where": "front desk",
+                "title": "Frontdesk computer broken and needs to be replaced",
+                "description":
+                    "I can't get the computer to work at the front desk so we need to get the IT people out here asap to get it replaced.",
+                "assignedTo": "2"
+            }
+        }
+    ]
+}
