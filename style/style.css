@@ -17,37 +17,40 @@ a {
  *        layout         *
  *************************/
 .container {
-    position: relative;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0;
-    box-sizing: border-box;
-    overflow: hidden;
+    display: flex;
 }
 .column {
-    width: 50%;
-    float: left;
-    box-sizing: border-box;
+    flex: 1;
 }
 
 /*************************
  *         nav           *
  *************************/
 nav {
-    padding: 1rem 3rem;
+    padding: 1rem 1rem 1rem 2rem;
     font-size: 2rem;
     border-bottom: .1rem solid #aaa;
     overflow: hidden;
 }
 
 nav ul {
-    border-left: 1px solid gray;
-}
-
-.top-nav p {
-    display: inline-block;
-    margin: 0 1rem;
+    display: flex;
+    align-items: center;
     font-size: 1.5rem;
+    margin: 0;
+}
+nav ul li {
+    list-style: none;
+    margin-right: 1rem;
+}
+nav ul li:nth-child(2) {
+    border-right: 1px solid gray;
+    padding-right: 2rem;
+    margin-right: 2rem;
+}
+.top-nav {
+    display: flex;
+    justify-content: space-between;
 }
 
 .nav-brand {
@@ -65,7 +68,7 @@ nav ul {
     font-weight: 500;
     font-size: 1.6rem;
     background-color: #eee;
-    padding: 1.8rem 3rem;
+    padding: 1.5rem 2rem;
     border-bottom: .1rem solid #aaa;
 }
 
@@ -74,12 +77,12 @@ nav ul {
  *************************/
 input[type="text"] {
     width: 100%;
-    padding: 1.6rem 6rem;
+    padding: 1.6rem 5.5rem;
     border: 1px solid #aaa;
     border-top: none;
     box-shadow: none;
     box-sizing: border-box;
-    background: url(../images/icon-search.png) no-repeat scroll 20px 10px;
+    background: url(../images/icon-search.png) no-repeat scroll 1.6rem 1rem;
 }
 
 input::placeholder {
@@ -99,19 +102,26 @@ ul.task-list {
 li.task-list-item {
     position: relative;
     display: block;
-    padding: 1.2rem 0 0 3rem;
+    padding: 1.2rem 0 0 2rem;
     background-color: #eee;
 }
 
-li.task-list-item .task-title {
+.task-title {
+    display: flex;
+    justify-content: space-between;
     padding-bottom: 1.2rem;
     padding-right: 2rem;
+}
+.task-title span:first-child {
+    margin-right: .6rem;
 }
 
 .task-area {
     font-weight: 500;
 }
-
+.task-time {
+    align-self: flex-end;
+}
 /*************************
  *         details       *
  *************************/
@@ -119,12 +129,24 @@ li.task-list-item .task-title {
 }
 
 .task-detail-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
     width: 100%;
-    padding: 1.25rem 3rem;
+    padding: .65rem 1rem;
     border-bottom: .2rem solid #428bca;
     box-sizing: border-box;
-    text-align: center;
-    overflow: hidden;
+}
+.header-item-center {
+    flex: 0 1 auto;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.header-item-right {
+    flex: 0 1 auto;
+    margin-left: auto;
 }
 
 .order-details {
@@ -132,27 +154,24 @@ li.task-list-item .task-title {
 }
 
 .detail-group {
-    position: relative;
-    width: 100%;
+    display: flex;
     margin: 0 auto 1.5rem;
     padding-left: 2rem;
     box-sizing: border-box;
-    overflow: hidden;
 }
 
-.detail-group label {
+.detail-label {
+    flex: 1;
     color: #A9A9A9;
     text-align: right;
-    width: 9%;
-    float: left;
     box-sizing: border-box;
 }
 
-.detail-group .detail-item {
+.detail-item {
+    position: relative;
+    flex: 8;
     margin: 0 0 0 2rem;
     display: inline-block;
-    width: 88%;
-    float: left;
     box-sizing: border-box;
 }
 
@@ -178,12 +197,6 @@ li.task-list-item .task-title {
 /*************************
  *         utility       *
  *************************/
-.float-right {
-    float: right;
-}
-.float-left {
-    float: left;
-}
 .lighter-text {
     color: #A9A9A9;
 }
@@ -204,7 +217,7 @@ li.task-list-item .task-title {
     border-bottom: .1rem solid #F89406;
 }
 .no-items-selected {
-    height: 100vh;
+    height: 70vh;
     display: flex;
     justify-content: center;
     align-items: center;

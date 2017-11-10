@@ -19,49 +19,53 @@ const TaskDetail = ({task}) => {
     return (
         <div className="task-detail light-text">
             <div className="task-detail-header">
-                <ul className="icon-group float-right">
-                    <li className="icon-sub-edit"></li>
-                    <li className="icon-sub-trash"></li>
-                    <li className="icon-sub-share"></li>
-                    <li className="icon-sub-attach"></li>
-                </ul>
-                <b>Work Order</b><span className="lighter-text"> Open</span>
+                <div className="header-item-center">
+                    <b>Work Order</b><span className="lighter-text"> Open</span>
+                </div>
+                <div className="header-item-right">
+                    <ul className="icon-group">
+                        <li className="icon-sub-edit"></li>
+                        <li className="icon-sub-trash"></li>
+                        <li className="icon-sub-share"></li>
+                        <li className="icon-sub-attach"></li>
+                    </ul>
+                </div>
             </div>
             <div className="order-details">
                 <p>Order Details</p>
                 <div className="detail-group">
-                    <label>Item</label>
+                    <label className="detail-label">Item</label>
                     <div className="detail-item">
                         {task.details.item || 'N/A'}
                         <a className="has-info-icon" href="#"><img src="/images/icon-info.png"/></a>
                     </div>
                 </div>
                 <div className="detail-group">
-                    <label>Issue</label>
+                    <label className="detail-label">Issue</label>
                     <div className="detail-item">{task.details.issue || 'N/A'}</div>
                 </div>
                 <div className="detail-group">
-                    <label>Where</label>
+                    <label className="detail-label">Where</label>
                     <div className="detail-item has-bottom-border">{task.details.where || 'N/A'}</div>
                 </div>
                 <div className="detail-group">
-                    <label>Details</label>
+                    <label className="detail-label">Details</label>
                     <div className="detail-item">{task.details.description}</div>
                 </div>
                 <div className="detail-group">
-                    <label>Due</label>
+                    <label className="detail-label">Due</label>
                     <div className="detail-item">
                         <Moment format="MMMM D, YYYY" unix>{task.details.due}</Moment>
                     </div>
                 </div>
                 <div className="detail-group">
-                    <label>Assignee</label>
+                    <label className="detail-label">Assignee</label>
                     <div className="detail-item has-bottom-border">
                         <a href="#">{assignee}</a>
                     </div>
                 </div>
                 <div className="detail-group">
-                    <label>Photos</label>
+                    <label className="detail-label">Photos</label>
                     <div className="detail-item">
                         {((uploads) => {
                             if (uploads) {
