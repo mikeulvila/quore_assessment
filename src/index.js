@@ -24,7 +24,7 @@ class App extends Component {
             .then((tasks) => {
                 axios.get('../data/areas.json')
                     .then((areas) => {
-                        this.tasks = tasks.data.tasks;
+                        this.tasks = tasks.data.tasks.sort((x, y) => x.details.created - y.details.created);
                         this.areas = areas.data.areas;
                         this.addAreaToTask(this.tasks, this.areas);
                         this.setState({ tasks: this.tasks });
