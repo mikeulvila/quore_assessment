@@ -16,6 +16,10 @@ const TaskDetail = ({task}) => {
         );
     }
 
+    const capitalize = (word) => {
+        return word.charAt(0).toUpperCase() + word.slice(1);
+    }
+
     return (
         <div className="task-detail light-text">
             <div className="task-detail-header">
@@ -46,7 +50,7 @@ const TaskDetail = ({task}) => {
                 </div>
                 <div className="detail-group">
                     <label className="detail-label">Where</label>
-                    <div className="detail-item has-bottom-border">{task.details.where || 'N/A'}</div>
+                    <div className="detail-item has-bottom-border">{capitalize(task.details.where) || 'N/A'}</div>
                 </div>
                 <div className="detail-group">
                     <label className="detail-label">Details</label>
