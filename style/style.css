@@ -7,6 +7,7 @@ body {
     font-weight: 200;
     font-family: Helvetica, Arial, sans-serif;
     color: #262626;
+    overflow-x: hidden;
 }
 
 a {
@@ -18,9 +19,13 @@ a {
  *************************/
 .container {
     display: flex;
+    align-items: stretch;
+    overflow: hidden;
+    height: calc(100vh - 109px);
 }
 .column {
     flex: 1;
+    height: 100%;
 }
 
 /*************************
@@ -78,7 +83,7 @@ nav ul li:nth-child(2) {
 input[type="text"] {
     width: 100%;
     padding: 1.6rem 5.5rem;
-    border: 1px solid #aaa;
+    border: .1rem solid #aaa;
     border-top: none;
     box-shadow: none;
     box-sizing: border-box;
@@ -93,9 +98,10 @@ input::placeholder {
  *         list          *
  *************************/
 ul.task-list {
+    border-right: .1rem solid #aaa;
     padding-left: 0;
-    margin: 0 0 2rem 0;
-    height: 100vh;
+    margin: 0;
+    height: 100%;
     background-color: #eee;
 }
 
@@ -126,8 +132,42 @@ li.task-list-item {
  *         details       *
  *************************/
 .task-detail {
+    /*min-height: 100%;*/
+    margin-bottom: 100%;
 }
-
+.task-detail-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1rem;
+    border-top: .1rem solid #aaa;
+    position: absolute;
+    bottom: 0;
+    width: 50%;
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+}
+.task-detail-footer div:first-child {
+    padding-left: 2rem;
+}
+footer ul {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    margin: 0;
+}
+footer ul li {
+    list-style: none;
+    margin-right: 1rem;
+}
+footer ul li:nth-child(2) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-left: .1rem solid #aaa;
+}
+footer a {
+    color: #5bc0de;
+}
 .task-detail-header {
     display: flex;
     justify-content: flex-start;
@@ -194,6 +234,7 @@ li.task-list-item {
     top: 3px;
 }
 
+
 /*************************
  *         utility       *
  *************************/
@@ -202,6 +243,9 @@ li.task-list-item {
 }
 .light-text {
     color: #696969;
+}
+.green-text {
+    color: #5cb85c;
 }
 .selected {
     background-color: #428bca !important;
@@ -217,7 +261,7 @@ li.task-list-item {
     border-bottom: .1rem solid #F89406;
 }
 .no-items-selected {
-    height: 70vh;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;

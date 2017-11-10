@@ -68,6 +68,23 @@ class App extends Component {
                     </section>
                     <section id="task-details" className="column">
                         <TaskDetail task={this.state.selectedTask}/>
+                        {((selectedTask) => {
+                            if (selectedTask !== null) {
+                                return (
+                                    <footer className="task-detail-footer">
+                                        <div>
+                                            <p>Paused by <a href="#">Cappie VanWonderbeard</a> 5 minutes ago</p>
+                                        </div>
+                                        <div>
+                                            <ul>
+                                                <li><a className="lighter-text" href="#">PAUSE</a></li>
+                                                <li><a className="green-text" href="#">START</a></li>
+                                            </ul>
+                                        </div>
+                                    </footer>
+                                )
+                            }
+                        })(this.state.selectedTask)}
                     </section>
                 </div>
             </div>
